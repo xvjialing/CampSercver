@@ -1,0 +1,205 @@
+<extend name="Public/base"/>
+
+<block name='style'>
+   <style type="text/css">
+      .main{
+	    background-color:white;
+      	margin-left:50px;
+      }
+      table{
+	     text-align:left;
+      	 padding:10px;
+      }
+      .t1{
+	     font-size:12px;
+      	 font-weight:bold;
+      }
+      .text1{
+	    font-size:16px;
+        font-weight:bold;
+      	margin:50px,10px;
+      }
+      td{
+	    padding:6px;
+      }
+   </style>
+</block>
+<block name="body">
+    <div class="main-title">
+        <h2><present name="data">[{$list.sname} ]</present>实习简历审核</h2>
+    </div>
+    
+    <div id="main"> 
+         <ul>
+           <li>
+              <sapn class="text1">基本信息</sapn>
+              <table>
+                 <tr>
+                   <td class='t1'>姓名：</td>
+                   <td>小孙</td>
+                   <td class='t1'>性别：</td>
+                   <td>男</td>
+                 </tr>
+                 <tr>
+                   <td class='t1'>出生年月：</td>
+                   <td >1996-1</td>
+                   <td class='t1'>联系电话：</td>
+                   <td>123456789</td>
+                 </tr>
+                 <tr>
+                   <td class='t1'>学历：</td>
+                   <td>本科</td>
+                   <td class='t1'>专业：</td>
+                   <td>计算机科学与技术</td>
+                 </tr>
+                 <tr>
+                    <td class='t1'>工作经验：</td>
+                    <td>应届生</td>
+                    <td class='t1'>毕业学校：</td>
+                    <td>XXX大学</td>
+                 </tr>
+                 <tr>
+                    <td class='t1'>电子邮箱：</td>
+                    <td>123456@qq.com</td>
+                                   
+                 </tr>
+                 </table>
+                 <hr style="height:1px;border:none;border-top:1px solid #c0c7b9;width:800px;margin-right:600px;">
+           </li>             
+           <li>
+             <span class="text1">主修课程：</span>
+             <p>数据结构，C语言程序设计，软件测试与可靠性，面向对象建模UML，数字图像处理，
+              <br/>数字电子与逻辑，计算机网络，操作系统，java程序设计，汇编与接口，软件工程</p>
+              <hr style="height:1px;border:none;border-top:1px solid #c0c7b9;width:800px;margin-right:600px;">
+           </li>
+           <li>
+              <span class="text1">自我简介：</span>
+              <p>
+                                               计算机科学与技术专业背景，具有一定的软件开发经验，
+                <br/>                             
+                                               曾在实验室学习过一段时间，具有一定的编码能力               
+              </p>
+              <hr style="height:1px;border:none;border-top:1px solid #c0c7b9;width:800px;margin-right:600px;">
+           </li>
+             <span class="text1">求职意向：</span>
+              <table>
+                 <tr>
+                    <td>目标职位：</td>
+                    <td>软件测试</td>
+                 </tr>
+                 <tr>
+                    <td>目标行业：</td>
+                    <td>IT行业</td>
+                 </tr>
+                 <tr>
+                    <td>期望薪资：</td>
+                    <td>4000-6000</td>
+                 </tr>
+                 <tr>
+                    <td>期望地区：</td>
+                    <td>杭州或周边</td>
+                 </tr>
+                 <tr>
+                    <td>到岗时间：</td>
+                    <td>随时</td>
+                 </tr>
+              </table>
+              <hr style="height:1px;border:none;border-top:1px solid #c0c7b9;width:800px;margin-right:600px;"/>
+           <li>
+             <span class="text1">校内经历及荣誉：</span>
+             <table>
+                <tr>
+                   <td>2013~2014年：</td>
+                   <td>
+                                                                  院学生会干事：负责院内班级早晚自修的考勤，培养了认真负责的工作态度。<br/>
+                                                                  专业奖学金一等奖；校级优秀学生； 
+                   </td>
+                </tr>
+                <tr>
+                   <td>2014~2015年：</td>
+                   <td>
+                                                                    学习委员：负责督促并收集课后作业，搜集、整理并发放各种学习资料<br/>
+                                                                   专业奖学金二等奖；校级优秀学生；                                             
+                   </td>
+                </tr>
+                <tr>
+                   <td>2015~2016年：</td>
+                   <td>
+                                                                 学习委员：督促同学进行考前复习，养成了勤奋好学的好习惯，努力形成良好班级<br/>
+                                                                 校级优秀团干                                           
+                   </td>
+                </tr>
+             </table>
+             <hr style="height:1px;border:none;border-top:1px solid #c0c7b9;width:800px;margin-right:600px;">
+           </li>
+           <li>
+              <table>
+                 <tr>
+                    <td class="text1">专业技能：</td>
+                    <td>电脑中级维修工，熟练使用Axure、Dreamweaver CS6、ZendStudio、Photoshop、MySQL等软件</td>
+                 </tr>
+                 <tr>
+                    <td class="text1">语言:</td>
+                    <td>全国普通话二级乙等、大学英语四级</td>
+                 </tr>
+              </table>
+              <hr style="height:1px;border:none;border-top:1px solid #c0c7b9;">
+           </li>
+         </ul>
+     </div>
+     
+     <div class="form-item cf">
+			<!-- <button class="btn submit-btn ajax-post hidden" id="submit" type="submit" target-form="form-horizontal">录用</button> -->
+			<a class="btn btn-return" href="{:U('bivouac?uid='.$uid)}">暂缓</a>
+			<a class="btn submit-btn ajax-get " target-form="form-horizontal" href="{:U('changeStatus?bivouacID='.$bivouacID)}">通过</a>
+			
+			
+			
+		</div>
+</block>
+<block name="script">
+     <script type="text/javascript">
+        $(function() {
+            //搜索功能
+            $("#search").click(function() {
+                var url = $(this).attr('url');
+                var query = $('.search-form').find('input').serialize();
+                query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+                query = query.replace(/^&/g, '');
+                if (url.indexOf('?') > 0) {
+                    url += '&' + query;
+                } else {
+                    url += '?' + query;
+                }
+                window.location.href = url;
+            });
+            //回车搜索
+            $(".search-input").keyup(function(e) {
+                if (e.keyCode === 13) {
+                    $("#search").click();
+                    return false;
+                }
+            });
+            //导航高亮
+            highlight_subnav('{:U('PerCenter')}');
+            //点击排序
+        	$('.list_sort').click(function(){
+        		var url = $(this).attr('url');
+        		var ids = $('.ids:checked');
+        		var param = '';
+        		if(ids.length > 0){
+        			var str = new Array();
+        			ids.each(function(){
+        				str.push($(this).val());
+        			});
+        			param = str.join(',');
+        		}
+
+        		if(url != undefined && url != ''){
+        			window.location.href = url + '/ids/' + param;
+        		}
+        	});
+        });
+    </script>
+
+</block>

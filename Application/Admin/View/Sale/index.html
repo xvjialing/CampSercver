@@ -1,0 +1,124 @@
+<extend name="Public/base"/>
+
+<block name='style'>
+<style type="text/css"> 
+   .mtu{
+      height:300px;
+
+   	  margin:20px 30px  20px  30px;
+ 
+   }
+   #tu1{
+     background-color:red;
+     margin:10px 10px 100px 30px;
+   	 width:1049px;
+   }
+   #chartdiv{
+     background-color:white;
+     width:1049px;
+     height:400px;
+     margin: -.8em auto; 
+   	margin-bottom:1px;
+     text-align:center; 
+   }
+   #container2{
+     width:1049px;
+     height:400px;
+     margin:20px 20px 20px 30px;
+   	background:red;
+   }
+
+</style>
+	
+	<!-- <script src="http://code.highcharts.com/highcharts.js"></script> -->
+	
+	
+	<!-- <link rel="stylesheet" type="text/css" href="{$Think.const.ADMIN_CSS_URL}my.css"> -->
+    
+
+</block>
+<block name="body">
+   <div class="main-title">
+        <h2>营地销售情况分析</h2>
+    </div>
+  
+       <div class='mtu' id='tu1'>
+          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+       </div>
+     <div class="main-title">
+        <h2>代理下营地中各游戏类型订单量比例</h2>
+    </div>    
+       <div id="chartdiv"></div>      
+ 
+       <div id="container2"></div>
+
+    
+</block>
+
+<block name="script">
+     <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}amcharts.js"></script>
+     <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}my1.js"></script>
+     <script src="{$Think.const.ADMIN_JS_URL}exporting.js"></script> 
+	<script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}grouped-categories.js"></script>
+
+    <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}jquery1101.js"></script>
+    <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}highcharts.js"></script>
+    	
+  <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}my.js"></script> 
+  
+    <script type="text/javascript">
+    var chart;
+	$(document).ready(function() {
+		chart = new Highcharts.Chart({
+			chart: {
+				renderTo: 'container2',
+				defaultSeriesType: 'line'
+			},
+			title: {
+				text: '平均每一营地每月订单数与该平台相比'
+			},
+			subtitle: {
+				text: 'Source: Ezdy.com'
+			},
+			xAxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			},
+			yAxis: {
+				title: {
+					text: '订单数量/个'
+				}
+			},
+			tooltip: {
+				enabled: false,
+				formatter: function() {
+					return '<b>'+ this.series.name +'</b><br/>'+
+						this.x +': '+ this.y +'°C';
+				}
+			},
+			plotOptions: {
+				line: {
+					dataLabels: {
+						enabled: true
+					},
+					enableMouseTracking: false
+				}
+			},
+			series: [{
+				name: '您代理下营地的平均每月每营地',
+				data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			}, {
+				name: '本平台上平均每月每营地',
+				data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+			}]
+		});
+		
+		
+	});
+        
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('clist')}');
+    </script>
+</block>

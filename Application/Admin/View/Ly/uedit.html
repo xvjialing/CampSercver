@@ -1,0 +1,56 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>{:isset($info['userID'])?'编辑':'新增'}消费者</h2>
+    </div>
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">消费者昵称<span class="check-tips">（输入消费者昵称）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-samll" name="userName" value="{$info.userName|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">性别<span class="check-tips">（输入消费者性别）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="userSex" value="{$info.userSex|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">联系方式<span class="check-tips">（输入消费者联系方式）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="userTel" value="{$info.userTel|default=0}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">真实姓名<span class="check-tips">（输入消费者真实姓名）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-small" name="userRName" value="{$info.userRName|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">等级<span class="check-tips">（消费者目前等级）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="userGrade" value="{$info.userGrade|default=0}">
+            </div>
+        </div>
+       
+       
+        <div class="form-item">
+            <input type="hidden" name="userID" value="{$info.userID|default=''}">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('uindex')}');
+    </script>
+</block>

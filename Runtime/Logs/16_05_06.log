@@ -1,0 +1,421 @@
+[ 2016-05-06T09:53:04+08:00 ] 127.0.0.1 /onethink1/index.php/Admin/
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.056003s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.008000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%Index/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 1 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 1 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `onethink_addons` [ RunTime:0.056003s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SiteStat' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.043003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_member` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_action_log` [ RunTime:0.050003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_action_log` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_document` [ RunTime:0.108006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_document` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_category` [ RunTime:0.031002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_category` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_model` [ RunTime:0.080005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_model` LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.536031s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.021001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022001s ]
+INFO: Run SiteStat [ RunTime:0.506029s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'SystemInfo' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.643037s ]
+SQL: select version() as v; [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.093005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.104006s ]
+INFO: Run SystemInfo [ RunTime:0.105006s ]
+SQL: SELECT `config` FROM `onethink_addons` WHERE ( `name` = 'DevTeam' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.716041s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.152009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.177010s ]
+INFO: Run DevTeam [ RunTime:0.073005s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.685040s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.152009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.180011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.162009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.163009s ]
+
+[ 2016-05-06T09:53:07+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/User/index.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%User/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.008001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_member` WHERE ( `status` >= 0 ) AND ( `nickname` LIKE '%%' ) LIMIT 1   [ RunTime:0.027001s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE ( `status` >= 0 ) AND ( `nickname` LIKE '%%' ) ORDER BY uid desc LIMIT 0,10   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.158009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.160009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-06T09:53:10+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/AgCamp/clist.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%AgCamp/clist%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=138 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 138 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 138 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '我的营地' ) AND ( `pid` = 138 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '扩展' ) AND ( `pid` = 138 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_lbivouac` [ RunTime:0.160010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_lbivouac` WHERE ( `agentID` = 7 ) AND ( `bivName` LIKE '%%' ) LIMIT 1   [ RunTime:0.017001s ]
+SQL: SELECT `bivouacID`,`numX`,`numY`,`bivAdd`,`agentID`,`bivName`,`bivGrade`,`bivImg`,`bivDes`,`bivHouse`,`bivFood`,`bivWea`,`bivType`,`Status`,`bivVisit`,`bivEva`,`model_id`,`category_id`,`campType`,`campCol`,`content`,`count` FROM `onethink_lbivouac` WHERE ( `agentID` = 7 ) AND ( `bivName` LIKE '%%' ) ORDER BY bivouacID desc LIMIT 0,10   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_clist` [ RunTime:0.010001s ]
+ERR: 1146:Table 'onethink.onethink_clist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `onethink_clist`
+SQL: SELECT count(*) FROM  onethink_ucenter_member,onethink_lagent,onethink_lbivouac,onethink_loder WHERE onethink_ucenter_member.id=1 AND 1=onethink_lagent.agentID  AND onethink_lagent.agentID=onethink_lbivouac.agentID AND onethink_lbivouac.bivouacID=onethink_loder.bivouacID [ RunTime:0.263015s ]
+ERR: 1146:Table 'onethink.onethink_loder' doesn't exist
+ [ SQL语句 ] : SELECT count(*) FROM  onethink_ucenter_member,onethink_lagent,onethink_lbivouac,onethink_loder WHERE onethink_ucenter_member.id=1 AND 1=onethink_lagent.agentID  AND onethink_lagent.agentID=onethink_lbivouac.agentID AND onethink_lbivouac.bivouacID=onethink_loder.bivouacID
+NOTIC: [2] Invalid argument supplied for foreach() F:\Ruanjian\wamp\www\onethink1\Application\Admin\Controller\AgCampController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: bivouac F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\05bcf9c6b784b3bf11574b039b2656ca.php 第 102 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.389022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.390022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-05-06T09:53:16+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/User/index.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%User/index%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_member` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_member` WHERE ( `status` >= 0 ) AND ( `nickname` LIKE '%%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `onethink_member` WHERE ( `status` >= 0 ) AND ( `nickname` LIKE '%%' ) ORDER BY uid desc LIMIT 0,10   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+NOTIC: [8] Undefined index: identity F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\65e605872ed5d34210f5b33beb13f5a3.php 第 142 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.109006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-05-06T09:53:22+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/camp.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/camp%' ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=162 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_lcamp` [ RunTime:0.122007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_lcamp` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_lcamp` INNER JOIN onethink_lbivouac on onethink_lcamp.bivouacID=onethink_lbivouac.bivouacID INNER JOIN onethink_ucenter_member on onethink_lcamp.agentID=onethink_ucenter_member.id  LIMIT 0,10   [ RunTime:0.049003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.143009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-06T09:53:24+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/cdetail/campID/11.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.003000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/cdetail%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.029002s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=170 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=162 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_lcamp` [ RunTime:0.007001s ]
+SQL: SELECT `campID`,`campName`,`agentID`,`bivouacID`,`campAmount`,`campPrice`,`startTime`,`endTime`,`campRisk`,`campHot`,`campSafety`,`gamesBg`,`Status`,`count` FROM `onethink_lcamp` WHERE ( `campID` = 11 ) LIMIT 1   [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\3aebc11b85bf82c2cf3165723826fd1e.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.161009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-05-06T09:53:30+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/bivouac.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/bivouac%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=161 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_lbivouac` [ RunTime:0.008000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_lbivouac` WHERE ( `bivName` LIKE '%%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `bivouacID`,`numX`,`numY`,`bivAdd`,`agentID`,`bivName`,`bivGrade`,`bivImg`,`bivDes`,`bivHouse`,`bivFood`,`bivWea`,`bivType`,`Status`,`bivVisit`,`bivEva`,`model_id`,`category_id`,`campType`,`campCol`,`content`,`count` FROM `onethink_lbivouac` WHERE ( `bivName` LIKE '%%' ) ORDER BY bivouacID desc LIMIT 0,10   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `onethink_lbivouac` INNER JOIN onethink_ucenter_member on onethink_ucenter_member.id=onethink_lbivouac.agentID    [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_clist` [ RunTime:0.005001s ]
+ERR: 1146:Table 'onethink.onethink_clist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `onethink_clist`
+SQL: SELECT count(*) FROM  onethink_ucenter_member,onethink_lagent,onethink_lbivouac,onethink_loder WHERE onethink_ucenter_member.id=1 AND 1=onethink_lagent.agentID  AND onethink_lagent.agentID=onethink_lbivouac.agentID AND onethink_lbivouac.bivouacID=onethink_loder.bivouacID [ RunTime:0.001000s ]
+ERR: 1146:Table 'onethink.onethink_loder' doesn't exist
+ [ SQL语句 ] : SELECT count(*) FROM  onethink_ucenter_member,onethink_lagent,onethink_lbivouac,onethink_loder WHERE onethink_ucenter_member.id=1 AND 1=onethink_lagent.agentID  AND onethink_lagent.agentID=onethink_lbivouac.agentID AND onethink_lbivouac.bivouacID=onethink_loder.bivouacID
+NOTIC: [2] Invalid argument supplied for foreach() F:\Ruanjian\wamp\www\onethink1\Application\Admin\Controller\PerCenterController.class.php 第 72 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.165009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.165009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-05-06T09:53:32+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/bivdetail/bivouacID/1.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/bivdetail%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=169 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=161 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_lbivouac` [ RunTime:0.006000s ]
+SQL: SELECT `bivouacID`,`numX`,`numY`,`bivAdd`,`agentID`,`bivName`,`bivGrade`,`bivImg`,`bivDes`,`bivHouse`,`bivFood`,`bivWea`,`bivType`,`Status`,`bivVisit`,`bivEva`,`model_id`,`category_id`,`campType`,`campCol`,`content`,`count` FROM `onethink_lbivouac` WHERE ( `bivouacID` = 1 ) LIMIT 1   [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\ce89c0bed299318f827587352ba87fec.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.112006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-05-06T09:56:43+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/bivouac.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/bivouac%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=161 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_lbivouac` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `onethink_lbivouac` WHERE ( `bivName` LIKE '%%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `bivouacID`,`numX`,`numY`,`bivAdd`,`agentID`,`bivName`,`bivGrade`,`bivImg`,`bivDes`,`bivHouse`,`bivFood`,`bivWea`,`bivType`,`Status`,`bivVisit`,`bivEva`,`model_id`,`category_id`,`campType`,`campCol`,`content`,`count` FROM `onethink_lbivouac` WHERE ( `bivName` LIKE '%%' ) ORDER BY bivouacID desc LIMIT 0,10   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `onethink_lbivouac` INNER JOIN onethink_ucenter_member on onethink_ucenter_member.id=onethink_lbivouac.agentID    [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_clist` [ RunTime:0.015600s ]
+ERR: 1146:Table 'onethink.onethink_clist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `onethink_clist`
+SQL: SELECT count(*) FROM  onethink_ucenter_member,onethink_lagent,onethink_lbivouac,onethink_loder WHERE onethink_ucenter_member.id=1 AND 1=onethink_lagent.agentID  AND onethink_lagent.agentID=onethink_lbivouac.agentID AND onethink_lbivouac.bivouacID=onethink_loder.bivouacID [ RunTime:0.000000s ]
+ERR: 1146:Table 'onethink.onethink_loder' doesn't exist
+ [ SQL语句 ] : SELECT count(*) FROM  onethink_ucenter_member,onethink_lagent,onethink_lbivouac,onethink_loder WHERE onethink_ucenter_member.id=1 AND 1=onethink_lagent.agentID  AND onethink_lagent.agentID=onethink_lbivouac.agentID AND onethink_lbivouac.bivouacID=onethink_loder.bivouacID
+NOTIC: [2] Invalid argument supplied for foreach() F:\Ruanjian\wamp\www\onethink1\Application\Admin\Controller\PerCenterController.class.php 第 72 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.109201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T09:56:47+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/bivdetail/bivouacID/1.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.015600s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/bivdetail%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=169 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=161 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `onethink_lbivouac` [ RunTime:0.000000s ]
+SQL: SELECT `bivouacID`,`numX`,`numY`,`bivAdd`,`agentID`,`bivName`,`bivGrade`,`bivImg`,`bivDes`,`bivHouse`,`bivFood`,`bivWea`,`bivType`,`Status`,`bivVisit`,`bivEva`,`model_id`,`category_id`,`campType`,`campCol`,`content`,`count` FROM `onethink_lbivouac` WHERE ( `bivouacID` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\ce89c0bed299318f827587352ba87fec.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.078001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-06T10:15:58+08:00 ] 127.0.0.1 /onethink1/index.php?s=/Admin/PerCenter/bivdetail/bivouacID/1.html
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\Ruanjian\wamp\www\onethink1\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `onethink_menu` WHERE ( `pid` = 0 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `onethink_menu` WHERE ( url like '%PerCenter/bivdetail%' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_menu` [ RunTime:0.005001s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=169 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=161 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title` FROM `onethink_menu` WHERE ( id=16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  `group` FROM `onethink_menu` WHERE ( pid = 16 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`url` FROM `onethink_menu` WHERE ( `pid` = 16 ) AND ( `hide` = 0 )  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '用户管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '行为管理' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '信息审核' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `onethink_menu` WHERE ( `group` = '数据分析' ) AND ( `pid` = 16 ) AND ( `hide` = 0 ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `onethink_lbivouac` [ RunTime:0.006000s ]
+SQL: SELECT `bivouacID`,`numX`,`numY`,`bivAdd`,`agentID`,`bivName`,`bivGrade`,`bivImg`,`bivDes`,`bivHouse`,`bivFood`,`bivWea`,`bivType`,`Status`,`bivVisit`,`bivEva`,`model_id`,`category_id`,`campType`,`campCol`,`content`,`count` FROM `onethink_lbivouac` WHERE ( `bivouacID` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title F:\Ruanjian\wamp\www\onethink1\Runtime\Cache\Admin\ce89c0bed299318f827587352ba87fec.php 第 5 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.081005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+

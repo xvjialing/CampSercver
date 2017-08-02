@@ -1,0 +1,44 @@
+<extend name="Public/base" />
+
+<block name="body">
+	<!-- 标题栏 -->
+		<div class="tab-wrap">
+		<ul class="tab-nav nav">
+		<li ><a href="{:U('updatenickname')}">修改昵称</a></li>
+		<li ><a href="{:U('updatepassword')}">修改密码</a></li>
+		<li class="current"><a href="{:U('updateXinxi')}">完善信息</a></li>
+		</ul>
+		<div class="tab-content">
+	<!-- 修改密码表单 -->
+     <form action="{:U(User/updateXinxi)}" method="post" class="form-horizontal">
+		
+		<div class="form-item">
+			<label class="item-label">联系方式：<span class="check-tips">（请输入联系方式）</span></label>
+			<div class="controls">
+				<input type="text" name="mobile" class="text input-large"  value="{$info.mobile}"/>
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">身份证号：<span class="check-tips">（请输入身份证号）</span></label>
+			<div class="controls">
+				<input type="text" name="identity" class="text input-large"  value="{$info.identity}"/>
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">地址：<span class="check-tips">（请输入所在详细地址）</span></label>
+			<div class="controls">
+				<input type="text" name="userAdd" class="text input-large" value="{$info.userAdd}"/>
+			</div>
+		</div>
+		<div class="form-item">
+			<button type="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 认</button>
+			<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+		</div>
+	</form>
+			</div>
+	</div>
+</block>
+
+<block name="script">
+	<script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+</block>

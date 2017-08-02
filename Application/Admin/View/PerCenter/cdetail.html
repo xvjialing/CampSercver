@@ -1,0 +1,80 @@
+<extend name="Public/base"/>
+
+<block name='style'>
+   <style type="text/css">
+      .main{
+	    background-color:white;
+      	
+      }
+   </style>
+</block>
+<block name="body">
+    <div class="main-title">
+        <h2><present name="data">[{$info.bivName} ] 子</present>营地详情</h2>
+    </div>
+    
+    <div id="main">
+         <span>营地名称:</span>
+    </div>
+    <div>
+       
+    </div>
+    
+    <div>
+       
+    </div>
+   <!--  <div class="form-item">
+			<label class="item-label"></label>
+			<div class="controls">
+				<empty name="list"><button type="submit" disabled class="btn submit-btn disabled" target-form="form-horizontal">确 定</button><else/><button type="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button></empty>
+				
+				<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+			</div>
+	</div> -->
+</block>
+<block name="script">
+     <script type="text/javascript">
+        $(function() {
+            //搜索功能
+            $("#search").click(function() {
+                var url = $(this).attr('url');
+                var query = $('.search-form').find('input').serialize();
+                query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+                query = query.replace(/^&/g, '');
+                if (url.indexOf('?') > 0) {
+                    url += '&' + query;
+                } else {
+                    url += '?' + query;
+                }
+                window.location.href = url;
+            });
+            //回车搜索
+            $(".search-input").keyup(function(e) {
+                if (e.keyCode === 13) {
+                    $("#search").click();
+                    return false;
+                }
+            });
+            //导航高亮
+            highlight_subnav('{:U('camp')}');
+            //点击排序
+        	$('.list_sort').click(function(){
+        		var url = $(this).attr('url');
+        		var ids = $('.ids:checked');
+        		var param = '';
+        		if(ids.length > 0){
+        			var str = new Array();
+        			ids.each(function(){
+        				str.push($(this).val());
+        			});
+        			param = str.join(',');
+        		}
+
+        		if(url != undefined && url != ''){
+        			window.location.href = url + '/ids/' + param;
+        		}
+        	});
+        });
+    </script>
+
+</block>

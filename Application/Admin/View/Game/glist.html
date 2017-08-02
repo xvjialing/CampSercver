@@ -1,0 +1,118 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>活动信息</h2>
+    </div>
+
+    <div class="cf">
+        <a class="btn" href="{:U('gadd',array('campID'=>I('get.campID',0)))}">新 增</a>
+        <button class="btn ajax-post confirm" url="{:U('gdel')}" target-form="ids">删 除</button>
+       
+        <!-- 高级搜索 -->
+        <div class="search-form fr cf">
+            <div class="sleft">
+                <input type="text" name="title" class="search-input" value="{:I('title')}" placeholder="请输入活动名称">
+                <a class="sch-btn" href="javascript:;" id="search" url="__SELF__"><i class="btn-search"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table table-striped">
+        <form class="ids">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="row-selected">
+                            <input class="checkbox check-all" type="checkbox">
+                        </th>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>所属营地</th>
+                        <th>游戏个数</th>
+                        <th>受欢迎度</th>
+                        <th>审核是否通过</th>                      
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+				<notempty name="_list">
+                <volist name="_list" id="camp">
+                    <tr>
+                        <td><input class="ids row-selected" type="checkbox" name="bivouacID[]" value="{$camp.bivouacID}"></td>
+                        <td>{$camp.campID}</td>
+                        <td>
+                            <a href="{:U('detail?campID='.$camp['campID'])}">{$camp.campName}</a>
+                        </td>
+                        <td>{$camp.bivName}</td>
+                        <td>3</td>
+                        <td>{$camp.campHot}</td>
+                        <td>
+                            <!-- <a href="{:U('toogleSta',array('bivouacID'=>$camp['bivouacID'],'value'=>abs($camp['Status']-1)))}" class="ajax-get"> </a>-->
+                            {$camp.Status_text}
+                            
+                        </td>                    
+                        <td>
+                            <a title="编辑" href="{:U('gupdate?campID='.$camp['campID'])}">编辑</a>
+                            <a class="confirm ajax-get" title="删除" href="{:U('gdelete?campID='.$camp['campID'])}">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+				<else/>
+				<td colspan="10" class="text-center"> aOh! 暂时还没有内容! </td>
+				</notempty>
+                </tbody>
+            </table>
+        </form>
+        <!-- 分页 -->
+        <div class="page">
+			{$_page}
+        </div>
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        $(function() {
+            //搜索功能
+            $("#search").click(function() {
+                var url = $(this).attr('url');
+                var query = $('.search-form').find('input').serialize();
+                query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+                query = query.replace(/^&/g, '');
+                if (url.indexOf('?') > 0) {
+                    url += '&' + query;
+                } else {
+                    url += '?' + query;
+                }
+                window.location.href = url;
+            });
+            //回车搜索
+            $(".search-input").keyup(function(e) {
+                if (e.keyCode === 13) {
+                    $("#search").click();
+                    return false;
+                }
+            });
+            //导航高亮
+            highlight_subnav('{:U('glist')}');
+            //点击排序
+        	$('.list_sort').click(function(){
+        		var url = $(this).attr('url');
+        		var ids = $('.ids:checked');
+        		var param = '';
+        		if(ids.length > 0){
+        			var str = new Array();
+        			ids.each(function(){
+        				str.push($(this).val());
+        			});
+        			param = str.join(',');
+        		}
+
+        		if(url != undefined && url != ''){
+        			window.location.href = url + '/ids/' + param;
+        		}
+        	});
+        });
+    </script>
+</block>

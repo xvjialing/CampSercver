@@ -1,0 +1,150 @@
+<extend name="Public/base"/>
+
+<block name="style">
+<style type="text/css"> 
+*{margin:0;padding:0;list-style-type:none;}
+
+/* star */
+#star{width:600px;margin:10px 0 10px 0;height:24px;}
+#star ul,#star span{float:left;display:inline;height:19px;line-height:19px;}
+#star ul{margin:0 10px;}
+#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url(/onethink1/public/Admin/images/star.png) no-repeat;}
+#star strong{color:#f60;padding-left:10px;}
+#star li.on{background-position:0 -28px;}
+#star p{position:absolute;top:20px;width:159px;height:60px;display:none;background:url(/onethink1/public/Admin/images/icon.gif) no-repeat;padding:7px 10px 0;}
+#star p em{color:#f60;display:block;font-style:normal;}
+</style>
+</block>
+
+<block name="body">
+    <div class="main-title">
+        <h2>编辑游戏信息</h2>
+    </div>
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">游戏名称<span class="check-tips">（输入游戏名称）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="gameName" value="{$info.gameName|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">游戏类型<span class="check-tips">（输入营地具体地址）</span></label>
+            <div class="controls">
+                <select name="result">
+                    <option value="">请选择.....</option>
+                    <volist name="result" id='re'>
+                        <option value="{$re.id}">{$re.gameType}</option>
+                    </volist>
+                </select>
+            </div>
+        </div>       
+        <div class="form-item">
+            <label class="item-label">游戏介绍<span class="check-tips">（输入游戏介绍及其规则描述）</span></label>
+            <textarea name="bivDes">{$info.gameDes|default=''}</textarea>
+            {:hook('adminArticleEdit', array('name'=>$info['name'],'value'=>$info['name']))}
+        </div>
+        <div class="form-item">
+            <label class="item-label">难度评测<span class="check-tips">（对游戏难易度评价）</span></label>
+
+                <div id="star">
+					<span style="color:#666;font:12px/1.5 Arial;">星级评论打分</span>
+					<ul>
+						<li><a href="javascript:;">1</a></li>
+						<li><a href="javascript:;">2</a></li>
+						<li><a href="javascript:;">3</a></li>
+						<li><a href="javascript:;">4</a></li>
+						<li><a href="javascript:;">5</a></li>
+						<input type="hidden" value="" name="gameRisk" class="gameRisk">
+					</ul>
+					<span></span>
+					<p></p>
+				</div>
+
+        </div>
+        <div class="form-item">
+            <label class="item-label">耗费值<span class="check-tips">（输入0~10的相对应值）</span></label>
+            <div class="controls">
+                <span>耗费体力值：</span>
+                <input type="text" class="text input-small" name="gamePower" value="{$info.gamePower|default='0'}">
+                <span style="margin-left:20px">耗费血量：</span>
+                <input type="text" class="text input-small" name="gameBlood" value="{$info.gameBlood|default='0'}">
+            </div>
+        </div>
+        
+        <div class="form-item">
+            <input type="hidden" name="bivouacID" value="{$info.bivouacID|default=''}">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('glist')}');
+        
+        //星星打分
+        window.onload = function (){
+
+	var oStar = document.getElementById("star");
+	var aLi = oStar.getElementsByTagName("li");
+	var oUl = oStar.getElementsByTagName("ul")[0];
+	var oSpan = oStar.getElementsByTagName("span")[1];
+	var oP = oStar.getElementsByTagName("p")[0];
+	var i = iScore = iStar = 0;
+	var aMsg = [
+				"很简单|人人都能过关，超简单的",
+				"较简单|少部分人可能通不了关，蛮简单",
+				"一般|部分人会遇到困难，难度中等",
+				"较难 |少部分人能通过，难度较大",
+				"很难 |较少人能闯过此关，超难啊"
+				]
+	
+	for (i = 1; i <= aLi.length; i++){
+		aLi[i - 1].index = i;
+		
+		//鼠标移过显示分数
+		aLi[i - 1].onmouseover = function (){
+			fnPoint(this.index);
+			//浮动层显示
+			oP.style.display = "block";
+			//计算浮动层位置
+			oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
+			//匹配浮动层文字内容
+			oP.innerHTML = "<em><b>" + this.index + "</b> 分 " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+		};
+		
+		//鼠标离开后恢复上次评分
+		aLi[i - 1].onmouseout = function (){
+			fnPoint();
+			//关闭浮动层
+			oP.style.display = "none"
+		};
+		
+		//点击后进行评分处理
+		aLi[i - 1].onclick = function (){
+			iStar = this.index;
+			oP.style.display = "none";
+			oSpan.innerHTML = "<strong>" + (this.index) + " 分</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
+		}
+	}
+	
+	//评分处理
+	function fnPoint(iArg){
+		//分数赋值
+		iScore = iArg || iStar;
+		for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";	
+	}
+	$("#star ul li").click(function(){
+		var $store = $(this).find("a").text();//获取到评分
+		
+		$(".gameRisk").val($store);
+	})
+};
+
+    </script>
+</block>

@@ -1,0 +1,224 @@
+<extend name="Public/base"/>
+
+<block name='style'>
+<link rel="stylesheet" type="text/css" href="{$Think.const.ADMIN_CSS_URL}highslide.css" />
+   <style type="text/css">
+       
+        #container{
+	       width: 1000px; 
+	       height: 400px; 
+	       margin: 0 auto;
+        	 background-color:pink;
+        }
+        #container2{
+	       width: 1000px; 
+	       height: 400px; 
+	       margin: 0 auto;
+        background-color:pink;
+        }
+        #chartdiv{
+           background-color:white;
+           width:1049px;
+           height:400px;
+           margin: -.8em auto; 
+   	       margin-bottom:1px;
+           text-align:center; 
+        }
+
+   </style>
+</block>
+<block name="script">
+ <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}jquery.min.js"></script>
+   <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}highslide-full.min.js"></script>
+   <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}highslide.config.js" ></script>
+
+  
+   <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}highcharts1.js"></script>
+   <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}exporting1.js"></script>
+  
+   <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}amcharts.js"></script>
+   <!-- <script type="text/javascript" src="{$Think.const.ADMIN_JS_URL}my1.js"></script> -->
+     
+  <script type="text/javascript">
+     /* container */
+    	var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container',
+						defaultSeriesType: 'line',
+						marginRight: 130,
+						marginBottom: 25
+					},
+					title: {
+						text: '近12个月入驻本平台所有营地的总订单量',
+						x: -20 //center
+					},
+					subtitle: {
+						text: 'Source: Ezdy.com',
+						x: -20
+					},
+					xAxis: {
+						categories: ['2015.4', '2015.5', '2015.6', '2015.7', '2015.8', '2015.9', 
+							'2015.10', '2015.11', '2015.12', '2016.1', '2016.2', '2016.3']
+					},
+					yAxis: {
+						title: {
+							text: '订单量/万个'
+						},
+						plotLines: [{
+							value: 0,
+							width: 1,
+							color: '#808080'
+						}]
+					},
+					tooltip: {
+						formatter: function() {
+				                return '<b>'+ this.series.name +'</b><br/>'+
+								this.x +': '+ this.y +'万个';
+						}
+					},
+					legend: {
+						layout: 'vertical',
+						align: 'right',
+						verticalAlign: 'top',
+						x: -10,
+						y: 100,
+						borderWidth: 0
+					},
+					series: [{
+						name: '订单量',
+						data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+					}
+						]
+				});
+				
+				
+			});
+		/* container2 */
+		var chart;
+			$(document).ready(function() {
+				chart = new Highcharts.Chart({
+					chart: {
+						renderTo: 'container2',
+						margin: [50, 200, 60, 170]
+					},
+					title: {
+						text: '截止2016年4月，入驻本平台的各类型营地占总订单量比例'
+					},
+					plotArea: {
+						shadow: null,
+						borderWidth: null,
+						backgroundColor: null
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+						}
+					},
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: 'pointer',
+							dataLabels: {
+								enabled: true,
+								formatter: function() {
+									if (this.y > 5) return this.point.name;
+								},
+								color: 'white',
+								style: {
+									font: '13px Trebuchet MS, Verdana, sans-serif'
+								}
+							}
+						}
+					},
+					legend: {
+						layout: 'vertical',
+						style: {
+							left: 'auto',
+							bottom: 'auto',
+							right: '50px',
+							top: '100px'
+						}
+					},
+				    series: [{
+						type: 'pie',
+						name: 'Browser share',
+						data: [
+							['丛林型',   45.0],
+							['草原型',       26.8],
+							{
+								name: '海滨型',    
+								y: 12.8,
+								sliced: true,
+								selected: true
+							},
+							['山地型',    8.5],
+							['乡村型',     6.2],
+							['湖畔型',   0.7]
+						]
+					}]
+				});
+			});
+			
+			/* chartdiv */
+			var chart;
+var legend;
+
+var chartData = [{
+    country: "策略类",
+    value: 240},
+{
+    country: "冒险类",
+    value: 190},
+{
+    country: "益智类",
+    value: 75},
+{
+    country: "体育类",
+    value: 40},
+{
+    country: "动作类",
+    value: 29},
+{
+    country: "射击类",
+    value: 20}];
+
+AmCharts.ready(function() {
+    // 饼图
+    chart = new AmCharts.AmPieChart();
+    chart.dataProvider = chartData;
+    chart.titleField = "country";
+    chart.valueField = "value";
+    chart.outlineColor = "";
+    chart.outlineAlpha = 0.8;
+    chart.outlineThickness = 2;
+    // 3D
+    chart.depth3D = 20;
+    chart.angle = 30;
+
+    // 图形写入
+    chart.write("chartdiv");
+});
+
+     //导航高亮
+        highlight_subnav('{:U('index')}');
+        </script>
+</block>
+<block name="body">
+    <div class="main-title">
+        <h2>所有入驻本平台营地的总订单量</h2>
+    </div>   
+        <div id="container"></div>
+
+    
+    <div class="main-title">
+        <h2>各营地类型订单量所占比例</h2>
+    </div>
+    <div id="container2"></div>
+    
+    <div class="main-title">
+        <h2>各游戏类型订单量所在比例</h2>
+    </div>
+    <div id="chartdiv"></div>
+</block>

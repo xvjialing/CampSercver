@@ -1,0 +1,67 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>{:isset($info['bivouacID'])?'编辑':'新增'}营地信息</h2>
+    </div>
+    <form action="{:U('cupdate')}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">营地名称<span class="check-tips">（输入营地名称）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="bivName" value="{$info.bivName|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">营地地址<span class="check-tips">（输入营地具体地址）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="bivAdd" value="{$info.bivAdd|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">营地介绍<span class="check-tips">（输入营地详细描述）</span></label>
+            <textarea name="bivDes">{$info.bivDes|default=''}</textarea>
+            {:hook('adminArticleEdit', array('name'=>$info['name'],'value'=>$info['name']))}
+        </div>
+        <div class="form-item">
+            <label class="item-label">特色美食<span class="check-tips">（当地特色美食描述）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-small" name="bivFood" value="{$info.bivFood|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">露营特色<span class="check-tips">（露营方式及营地详细介绍）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="content" value="{$info.content|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">营地类型<span class="check-tips">（用于营地类型搜索标签）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="bivType" value="{$info.bivType|default=''}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">露营方式<span class="check-tips">（用于露营方式搜索标签）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="campType" value="{$info.campType|default=''}">
+            </div>
+        </div>
+       
+      
+        <div class="form-item">
+            <input type="hidden" name="bivouacID" value="{$info.bivouacID|default=''}">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('clist')}');
+    </script>
+</block>

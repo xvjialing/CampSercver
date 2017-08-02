@@ -1,0 +1,59 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>个人信息修改</h2>
+    </div>
+    <form action="{:U('pedit')}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">用户名<span class="check-tips">（您的登录名）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-samll" name="username" value="{$user.username}" autocomplete="off">
+            </div>
+        </div>
+         
+        <div class="form-item">
+            <label class="item-label">密码<span class="check-tips">（请输入您的密码）</span></label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="password">
+            </div>
+        </div>
+       
+        <div class="form-item">
+            <label class="item-label">邮箱<span class="check-tips">（可修改您的邮箱）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="email" value="{$user.email}" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">联系方式<span class="check-tips">（可修改您的联系方式）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="mobile" value="{$user.mobile}" autocomplete="off">
+            </div>
+        </div>
+         <div class="form-item">
+            <label class="item-label">注册时间<span class="check-tips">（可修改您的联系方式）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="reg_time" value="{$user.reg_time}" autocomplete="off">
+            </div>
+        </div>
+       
+       
+        <div class="form-item">
+            <input type="hidden" name="id" value="{$user.id}">
+      <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">保存</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+    	//alert($("#password").val());
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('person')}');
+    </script>
+</block>

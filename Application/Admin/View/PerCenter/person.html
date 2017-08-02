@@ -1,0 +1,63 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>个人信息</h2>
+    </div>
+    <form action="" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">用户名<span class="check-tips">（您的登录名）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-samll" name="adminName" disabled value="{$user.username}" autocomplete="off">
+            </div>
+        </div>
+         
+        <div class="form-item">
+            <label class="item-label">密码<span class="check-tips">（您的密码）</span></label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="adminPwd"  disabled value="{$user.password}" autocomplete="off">
+            </div>
+        </div>
+       <!--  <div class="form-item">
+            <label class="item-label">确认密码<span class="check-tips">（请确认您的密码）</span></label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="repassword" autocomplete="off">
+            </div>
+        </div> -->
+        <div class="form-item">
+            <label class="item-label">邮箱<span class="check-tips">（可修改您的邮箱）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="adminEmail" disabled value="{$user.email}" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">联系方式<span class="check-tips">（可修改您的联系方式）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="adminTel" disabled value="{$user.mobile}" autocomplete="off">
+            </div>
+        </div>
+         <div class="form-item">
+            <label class="item-label">注册时间<span class="check-tips">（可修改您的联系方式）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="adminTime"  disabled value="{$user.reg_time}" autocomplete="off">
+            </div>
+        </div>
+       
+       
+        <div class="form-item">
+            <input type="hidden" name="id" value="{$user.id}">
+            <a class="btn submit-btn" href="{:U('pedit?id='.$user['id'])}">修改</a>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        Think.setValue("pid", {$info.pid|default = 0});
+        Think.setValue("hide", {$info.hide|default = 0});
+        Think.setValue("is_dev", {$info.is_dev|default = 0});
+        //导航高亮
+        highlight_subnav('{:U('person')}');
+    </script>
+</block>

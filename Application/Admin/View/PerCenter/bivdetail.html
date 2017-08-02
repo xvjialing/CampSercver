@@ -1,0 +1,126 @@
+<extend name="Public/base"/>
+
+<block name='style'>
+   <style type="text/css">
+      #main2{
+	    background-color:white;
+      	border:1px solid #b9bbb7;
+      	margin:20px;
+      	padding:20px;
+      }
+      .head{
+	   margin:10px 0 20px 10px;
+      }
+      .content{
+	    margin:0 0 20px 10px;
+   
+      }
+      .image1{
+	     margin:30px 180px;
+      	 width:600px;
+      	 height:400px;
+      }
+   </style>
+</block>
+<block name="body">
+    <div class="main-title">
+        <h2><present name="data">[{$list.bivName} ] 子</present>营地信息</h2>
+    </div>
+    
+    <div id="main2">
+  
+         <div>
+          <h3 class="head">桐庐纪龙山野营地</h3>
+          <div class="content">
+          <h3>- 营地简介   -</h3>
+          <p>纪龙山位于浙江省桐庐县瑶琳镇（瑶琳仙境附近）路口右转冷坞方向（省道有路牌）、海拔800米，喀斯特地貌、洞穴、森林、水库、峡谷、绝壁、古道、村落分布其间，上下游线10公里。中间山顶是营地，营地面积1平方公里，备有接待数百人露营装备，营区简单，乡土、原始，项目有惊无险，开心好玩、刺激，是年轻人最爱。景区周边拥有农家、2、3、4、5星宾馆、饭店、木屋区、会议室，均可与纪龙山野营景区连线游玩。</p>
+          </div>
+          <div class="content">
+          <h3>- 住宿介绍   -</h3>
+          <span>山顶上的帐篷小屋</span>
+          <p>出来郊游就是应该多锻炼自己，一路披荆斩棘地登上山顶，领取营地准备好的帐篷。坐在帐篷里，向远方眺望，浓浓绿意尽收眼底还可以欣赏到这里独特的卡斯特地貌呢。晚上躺在宽敞的帐篷里，听着周围树林中偶尔发出的窸窸窣窣的细小声音入睡。</p>
+          <img class="image1" src="{$Think.ADMIN_IMG_URL}/zhusu.jpg">
+          </div>
+          <div class="content">
+            <h3>- 美食介绍  -</h3>
+            <span>徒步过最美的风景</span>
+            <p>无论是团体还是家庭都应该尝试一次徒步拓展，不是为了终点而是为了增进感情锻炼意志力。每一个不敢上去的坎都会有人搀扶着你，其实我徒步过最美的风景不过是跟着你的脚步一深一浅。</p>
+            <img class="image1" src="{$Think.ADMIN_IMG_URL}/meishi.png">
+          </div>
+          <div class="content">
+            <h3>- 风景介绍  -</h3>
+           
+            <p>纪龙山野营地四周山林众多，环境幽静远离人烟。在这里进行露营活动有一种丛林探险的感觉，自然是不能错过山林“野味”。在这深山老林中我们的烤架上缓缓飘出的肉香与炊烟突然有一种家的感觉。</p>
+            <img class="image1" src="{$Think.ADMIN_IMG_URL}/fengjing.jpg">
+          </div>
+          
+          <div class="content">
+            <h3>- 交通介绍  -</h3>
+            <p>上海→杭州绕城（北绕城公路）→转塘（下）→富阳{注意}→（05省道）新登→（不进城直走）淳安方向→瑶琳收费站→瑶琳镇加油站接团（纪龙山山脚）或杭州绕城（北绕城公路）→桐庐出口下第2个红绿灯即→320国道左转→7分钟后过杜济大桥后看右边指路牌：分水方向→过隧道后3公里左转→18公里→瑶琳镇丁字路口即（纪龙山山脚）</p>
+            
+          </div>
+          
+          <div class="content">
+            <h3>- 营地须知  -</h3>
+            <p>    	野外活动不同于一般旅游，队员须听从向导的指挥，对于无视指挥所造成的后果自负，严禁吸烟和擅自野外用火，登山时勿扔垃圾。
+    个人自备：手电、双肩背包、运动鞋、运动衣裤、凉、拖鞋、替换内外衣、袜、个人常用药品、洗漱卫生用品，女生勿穿裙子、高跟鞋、硬皮鞋。
+    注意保护生态环境，尊重自然，尽量使用现有营地，减少对环境的污染。
+    为安全起见，组织者可据天气情况，适当改变行程。
+    营地只能接待团队，无法接待散客。 </p>
+            
+          </div>
+    </div>
+     <div class="form-item">
+            <input type="hidden" name="bivouacID" value="{$info.bivouacID|default=''}">
+<!--            <input class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal" onclick="location.href='{:U('changeStatus?biouacID='.$bivouacID)}'" value="通过"/>
+ -->             <a class="btn submit-btn ajax-get " target-form="form-horizontal" href="{:U('changeStatus?bivouacID='.$bivouacID)}">通过</a> 
+<!--             <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确定</button> -->
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+     </div>
+</block>
+<block name="script">
+     <script type="text/javascript">
+        $(function() {
+            //搜索功能
+            $("#search").click(function() {
+                var url = $(this).attr('url');
+                var query = $('.search-form').find('input').serialize();
+                query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+                query = query.replace(/^&/g, '');
+                if (url.indexOf('?') > 0) {
+                    url += '&' + query;
+                } else {
+                    url += '?' + query;
+                }
+                window.location.href = url;
+            });
+            //回车搜索
+            $(".search-input").keyup(function(e) {
+                if (e.keyCode === 13) {
+                    $("#search").click();
+                    return false;
+                }
+            });
+            //导航高亮
+            highlight_subnav('{:U('bivouac')}');
+            //点击排序
+        	$('.list_sort').click(function(){
+        		var url = $(this).attr('url');
+        		var ids = $('.ids:checked');
+        		var param = '';
+        		if(ids.length > 0){
+        			var str = new Array();
+        			ids.each(function(){
+        				str.push($(this).val());
+        			});
+        			param = str.join(',');
+        		}
+
+        		if(url != undefined && url != ''){
+        			window.location.href = url + '/ids/' + param;
+        		}
+        	});
+        });
+    </script>
+
+</block>
